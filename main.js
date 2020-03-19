@@ -37,70 +37,41 @@ function addField(argument) {
 
 }
 
-function GetDayTotal(tableId, colNumber) {
+function GetDayTotal(tableId, columnnumber) {
     var daytotal = 0;
-    try {
-        var tableElem = window.document.getElementById(tableId);
-        var tablebody = tableElem.getElementsByTagName("tbody").item(0);
-        var i = 0;
+    
+    var table = document.getElementById(tableId);
+    document.getElementsByClassName("total")
 
-        var howManyRows = tablebody.rows.length; //works
-        //iterate through table to acucmulate all total from the day
-        for (i = 1; i < (howManyRows); i++) {
-            daytotal = daytotal + parseInt(tablebody.rows[1].cells[1]);
-            console.log(daytotal);
+    for (var r = 1, n = table.rows.length; r < n; r++) {
+        var x = r.getElementById("myNumber").value;
+        daytotal += thiscell;
+        console.log(daytotal);
 
-            var thistablerow = tablebody.rows[i];
-            var thistablecol = thistablerow.cells[colNumber];
-            var thisTextnode = thistablecol.childNodes;
-            console.log(thisTextnode);
-
-            if (debugScript) {
-                window.alert("text is" + thisTextnode.data)
-            }
-            var thisNumber = parseFloat(thisTextNode.data);
-            window.alert("Error Found");
-
-            if (!isNaN(thisNumber))
-
-                daytotal += thisNumber;
+          //  console.log(table.rows[r].cells[columnnumber].value);
         }
-    } catch (ex) {
-        window.alert("There Seems to be a Problem");
-        daytotal = 0;
+    
+   // console.log(daytotal);
 
-
-
-    } finally {
-        return daytotal;
-    }
+    //var rows = table.getElementsByTagName("tr");
+    
+    //var rowlength = table.rows.length;
+    //console.log(rowlength);
+    return daytotal;
 }
 
-function DsiplayDayTotal() {
+function DisplayDayTotal() {
     //var tableelem = "DayTotal";
-    try {
+       // var tableElemname = "myTable";
+
         var dayTotal = GetDayTotal("myTable", 1);
         var daytotalelem = window.document.getElementById("dayTotal");
         daytotalelem.innerHTML = dayTotal;
-    } catch {
-        window.alert("Unable to claculate Day Total")
-    }
-    return;
+
+       // window.alert("Unable to claculate Day Total")
+ 
+        return;
 }
-
-function TestStuff() {
-    var total = 0;
-    //var table = document.getElementById("myTayble");
-    var tableElem = window.document.getElementById("myTable");
-
-    var tablebody = tableElem.getElementsByTagName("tbody").item(0);
-    var howManyRows = tablebody.rows.length;
-
-    for (var i = 0; i < howManyRows; i++) {
-        total = total + parseInt(tablebody.rows[i].cells[1].innerHTML)
-    }
-    final = document.getElementById("dayTotal").innerHTML = "Day Total  " + total;
-    console.log(final);
-    return;
+function AdjustedTotal(){
 
 }
