@@ -8,6 +8,8 @@ function addField(argument) {
 
     var Total = document.createElement("input");
     Total.setAttribute("name", "Total" + currentIndex);
+    //document.getElementsByName("Total" + currentIndex).placeholder = "Total";
+
 
     var In = document.createElement("input", placeholder = "In");
     In.setAttribute("name", "In" + currentIndex);
@@ -37,41 +39,17 @@ function addField(argument) {
 
 }
 
-function GetDayTotal(tableId, columnnumber) {
-    var daytotal = 0;
-    
-    var table = document.getElementById(tableId);
-    document.getElementsByClassName("total")
+function add_customer_total() {
+    var totals = document.getElementsByTagName("input");
+    var Day_Total = document.getElementById("dayTotal");
+    var total = 0;
 
-    for (var r = 1, n = table.rows.length; r < n; r++) {
-        var x = r.getElementById("myNumber").value;
-        daytotal += thiscell;
-        console.log(daytotal);
-
-          //  console.log(table.rows[r].cells[columnnumber].value);
+    for (var i = 0; i < totals.length; i++) {
+        var ip = totals[i];
+        if (ip.name && ip.name.indexOf("total") < 0) {
+            total += parseInt(ip.value) || 0;
         }
-    
-   // console.log(daytotal);
-
-    //var rows = table.getElementsByTagName("tr");
-    
-    //var rowlength = table.rows.length;
-    //console.log(rowlength);
-    return daytotal;
-}
-
-function DisplayDayTotal() {
-    //var tableelem = "DayTotal";
-       // var tableElemname = "myTable";
-
-        var dayTotal = GetDayTotal("myTable", 1);
-        var daytotalelem = window.document.getElementById("dayTotal");
-        daytotalelem.innerHTML = dayTotal;
-
-       // window.alert("Unable to claculate Day Total")
- 
-        return;
-}
-function AdjustedTotal(){
-
+    }
+    var daytotalelem = window.document.getElementById("dayTotal");
+    daytotalelem.innerHTML = total;
 }

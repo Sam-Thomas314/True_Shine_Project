@@ -32,7 +32,7 @@
         <div class="collapse navbar-collapse" id="collapsibleNavbar">
             <ul class="navbar-nav">
                 <li class="nav-item">
-                    <a class="nav-link" href="home.html"> Home </a> 
+                    <a class="nav-link" href="home.html"> Home </a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link" href="TimeSheet.html">Time Sheet</a>
@@ -71,40 +71,12 @@
                 <div class="col-sm-2"></div>
 
             </div>
-            <form id="Customer">
-                <div class="row" id="customer1">
-                    <div class="col-sm-6">
-                        <div class="input-group-prepend">
-                            <span class="input-group-text">Customer </span>
-                            <input type="text" class="form-control" placeholder="Customer">
-                        </div>
-                    </div>
-                    <div class="col-sm-2">
-                        <div class="input-group-prepend">
-                            <span class="input-group-text">$ </span>
-                            <input type="text" class="form-control" placeholder="Total">
-                        </div>
-                    </div>
-                    <div class="col-sm-2">
-                        <div class="input-group-prepend">
-                            <span class="input-group-text" type="time">In </span>
-                            <input type="text" class="form-control" placeholder="In">
-                        </div>
-                    </div>
-                    <div class="col-sm-2">
-                        <div class="input-group-prepend">
-                            <span class="input-group-text" type="time">Out </span>
-                            <input type="text" class="form-control" placeholder="Out">
-                        </div>
-                    </div>
-                </div>
-            </form>
             <br>
             <div class="row">
                 <div class="col">
-                    <div class="table-responsive">
-                        <table class="table" id="myTable">
-                            <tbody>
+                    <form id="Customer_Sheet">
+                        <div class="table-responsive">
+                            <table class="table" id="myTable">
                                 <thead>
                                     <tr>
                                         <th scope="col"> Customer:</th>
@@ -113,36 +85,27 @@
                                         <th scope="col"> Out:</th>
                                     </tr>
                                 </thead>
-                                <tr>
-                                    <td><input type="text" name="Customer" placeholder="Customer"></td>
-                                    <td id ="total"><input value="3" type="dollar" name="Total" placeholder="Total"></td>
-                                    <td scope="row"><input type="text" name="In" placeholder="In"></td>
-                                    <td><input type="text" name="Out" placeholder="Out"></td>
-                                </tr>
-                                <tr>
-                                    <td><input type="text" name="Customer" placeholder="Customer"></td>
-                                    <td id ="total"><input value="3" type="dollar" name="Total" placeholder="Total"></td>
-                                    <td><input type="text" name="In" placeholder="In"></td>
-                                    <td><input type="text" name="Out" placeholder="Out"></td>
-                                </tr>
-                                <tr>
-                                    <td><input type="text" name="Customer" placeholder="Customer"></td>
-                                    <td id ="total"><input value="3" type="dollar" name="Total" placeholder="Total"></td>
-                                    <td><input type="text" name="In" placeholder="In"></td>
-                                    <td><input type="text" name="Out" placeholder="Out"></td>
-                                </tr>
-                            </tbody>
-                        </table>
-                    </div>
+                                <tbody>
+                                    <tr>
+                                        <td><input type="text" name="Customer" ></td>
+                                        <td id ="total"><input type="dollar" name="Total" "></td>
+                                        <td scope="row"><input type="text" name="In" ></td>
+                                        <td><input type="text" name="Out" ></td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </form>
                 </div>
                 <div class="col"> Hello, this space is for showing the total pay of each person at the end of the day</div>
             </div>
 
 
             <br>
-            <input type="button" class="button" value="Calculate Day Total" onclick="DisplayDayTotal();">
-
             <input type="button" class="button" value="Add another line" onclick="addField();">
+
+            <input type="button" class="button" value="Calculate Day Total" onclick="add_customer_total();">
+
 
             <div class="row ">
                 <div class="col-sm-6 ">
@@ -169,10 +132,7 @@
                     </div>
                     </div>
                 </div>
-                <div class="col">
-                    <p> Hellwfewefo</p>
 
-                </div>
             </div>
 
 

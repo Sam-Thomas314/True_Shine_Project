@@ -1,0 +1,28 @@
+<form id="Customer">
+                <div class="row" id="customer1">
+                    <div class="col-sm-6">
+                        <div class="input-group-prepend">
+                            <span class="input-group-text">Customer </span>
+                            <input type="text" class="form-control" placeholder="Customer">
+                        </div>
+                    </div>
+                    <div class="col-sm-2">
+                        <div class="input-group-prepend">
+                            <span class="input-group-text">$ </span>
+                            <input type="text" class="form-control" placeholder="Total">
+                        </div>
+                    </div>
+                    <div class="col-sm-2">
+                        <div class="input-group-prepend">
+                            <span class="input-group-text" type="time">In </span>
+                            <input type="text" class="form-control" placeholder="In">
+                        </div>
+                    </div>
+                    <div class="col-sm-2">
+                        <div class="input-group-prepend">
+                            <span class="input-group-text" type="time">Out </span>
+                            <input type="text" class="form-control" placeholder="Out">
+                        </div>
+                    </div>
+                </div>
+</form>
