@@ -156,9 +156,8 @@
                     </div>
                     <input type="number" class="form-control" placeholder="In" id="rate_tech1">
 
-
                     <div class="input-group-prepend">
-                        <span class="btn" id="tech1pay" onclick="get_tech1_pay()"> Pay </span>
+                        <span class="input-group-text" id="tech1pay" onclick="get_tech1_pay()"> Pay </span>
                     </div>
                     <input type="currency" data-type ="currency" class="form-control" id="pay_tech1">
                 </div>
@@ -198,7 +197,7 @@
 
 
                     <div class="input-group-prepend">
-                        <span class="input-group-text" id="tech2pay" onclick="get_tech2_pay()"> Pay </span>
+                        <span class="input-group-text"  name = "pay" id="tech2pay" onclick="get_tech2_pay()"> Pay </span>
                     </div>
                     <input type="text" class="form-control" id="pay_tech2">
                 </div>
@@ -236,7 +235,7 @@
                     <input type="number" class="form-control" placeholder="Rate" id = "rate_tech3">
 
                     <div class="input-group-prepend">
-                        <span class="input-group-text" id="tech3pay" onclick="get_tech3_pay()"> Pay </span>
+                        <span class="input-group-text"  name = "pay" id="tech3pay" onclick="get_tech3_pay()"> Pay </span>
                     </div>
                    <input type="text" class="form-control" id="pay_tech3">
                 </div>
@@ -266,22 +265,29 @@
                     <div class="input-group-prepend">
                         <span class="input-group-text">Total hrs: </span>
                     </div>
-                    <input type="njumber" class="form-control" id="hours_tech4" placeholder="Total hours">
+                    <input type="number" class="form-control" id="hours_tech4" placeholder="Total hours">
 
                     <div class="input-group-prepend">
                         <span class="input-group-text" > X (Rate) </span>
                     </div>
-                    <input type="time" class="form-control" id="rate_tech4" placeholder="Rate">
+                    <input type="number" class="form-control" id="rate_tech4" placeholder="Rate">
 
                     <div class="input-group-prepend">
-                        <span class="input-group-text"> Pay </span>
+                        <span class="input-group-text" name = "pay" id="tech4pay" onclick="get_tech4_pay()"> Pay </span>
                     </div>
-                    <p type="text" class="form-control" id="pay_tech4">
+                    <input type="text" class="form-control" id="pay_tech4">
                 </div>
             </form>
-            <div class="row-group-prepend">
-                <p> Tech Total: </p>
+            <div class="input-group-prepend">
+                        <span class="input-group-text" id="tech_total_button" onclick="get_tech_total()"> Tech Total </span>
+                <input type="text" class="form-control" id="tech_total">
             </div>
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+
         </form>
     </div>
 </body>

@@ -133,6 +133,11 @@ function onLoadListeners() {
     pay_4.addEventListener("keyup", function(event) {
         document.getElementById("tech4pay").click();
     });
+
+    var tech_total = document.getElementById("tech_total");
+    tech_total.addEventListener("keyup", function(event) {
+        document.getElementById("tech_total_button").click();
+    });
 }
 
 function get_tech1_pay() {
@@ -164,11 +169,39 @@ function get_tech4_pay() {
 }
 
 function get_tech_total() {
-    var techtotal;
-    var tech1 = document.getElementById("pay_tech1");
-    var tech2 = document.getElementById("pay_tech2");
-    var tech3 = document.getElementById("pay_tech3");
-    var tech4 = document.getElementById("pay_tech4");
+    arr = [];
+    var sum = 0;
+    arr.push(document.getElementById("pay_tech1").value);
+    arr.push(document.getElementById("pay_tech1").value);
+    //console.log(arr);
 
 
+    for (var i = 0; arr.length == i; i++) {
+        sum += arr[i];
+        console.log(sum);
+    }
+
+    //var tech2 = document.getElementById("pay_tech2").value;
+
+
+    console.log(sum);
+
+
+    /*
+    var sum = 0;
+    var arr = document.getElementsByTagName("input");
+    var tech_total = document.getElementById("tech_total");
+    for (var k = 0; k < arr.length; k++) {
+        var input = arr[k];
+
+        if (input.name && input.name.indexOf("pays") < 0) {
+            sum += parseInt(input.value) || 0;
+
+        } else {
+            console.log("Didnt work");
+        }
+    }
+    tech_total.value = sum;
+    //console.log(techtotal);
+    */
 }
