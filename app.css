@@ -1,0 +1,20 @@
+body {
+    background-color: grey;
+}
+
+table,
+th,
+td {
+    border: 1px solid black;
+}
+
+#dayTotals {
+    border-style: solide;
+    border-color: solid black;
+    text-align: center;
+    font-size: x-large;
+}
+
+tbody {
+    text-align: center;
+}

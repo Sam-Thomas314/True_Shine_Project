@@ -1,0 +1,3 @@
+To grab the answer from a checkbox, just grab the .value of the variable.
+f its true or fales, then that will
+adjust the total for the day
