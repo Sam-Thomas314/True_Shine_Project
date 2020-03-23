@@ -138,6 +138,11 @@ function onLoadListeners() {
     tech_total.addEventListener("keyup", function(event) {
         document.getElementById("tech_total_button").click();
     });
+
+    var hours_tech1 = document.getElementById("hours_tech1");
+    hours_tech1.addEventListener("keyup", function(event) {
+        document.getElementById("totalhours1").click();
+    });
 }
 
 function get_tech1_pay() {
@@ -172,36 +177,30 @@ function get_tech_total() {
     arr = [];
     var sum = 0;
     arr.push(document.getElementById("pay_tech1").value);
-    arr.push(document.getElementById("pay_tech1").value);
-    //console.log(arr);
-
-
-    for (var i = 0; arr.length == i; i++) {
-        sum += arr[i];
-        console.log(sum);
+    arr.push(document.getElementById("pay_tech2").value);
+    arr.push(document.getElementById("pay_tech3").value);
+    arr.push(document.getElementById("pay_tech4").value);
+    //convert array of strings to array of integers
+    for (var i = 0; i < arr.length; i++) {
+        arr[i] = +arr[i];
     }
-
-    //var tech2 = document.getElementById("pay_tech2").value;
-
-
-    console.log(sum);
-
-
-    /*
-    var sum = 0;
-    var arr = document.getElementsByTagName("input");
-    var tech_total = document.getElementById("tech_total");
     for (var k = 0; k < arr.length; k++) {
-        var input = arr[k];
-
-        if (input.name && input.name.indexOf("pays") < 0) {
-            sum += parseInt(input.value) || 0;
-
-        } else {
-            console.log("Didnt work");
-        }
+        sum += arr[k];
     }
+    var tech_total = document.getElementById("tech_total");
     tech_total.value = sum;
-    //console.log(techtotal);
-    */
+}
+
+function get_tech1_hours() {
+    var tech1_in = document.getElementById("tech1_in").value;
+    var tech1_out = document.getElementById("tech1_out").value;
+
+    //if (moment(tech1_out.isBefore(tech1_in))) tech1_out.add(1, 'day');
+
+    if (tech1_in && tech1_out) {
+        tech1_in = tech1_in.ConvertToSeconds;
+        tech1_out = tech1_out.ConvertToSeconds;
+        var diff = Math.abs(tech1_in - tech1_out);
+        //console.log("Time Difference is: " + diff);
+    }
 }
